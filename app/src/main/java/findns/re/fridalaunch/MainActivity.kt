@@ -21,8 +21,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun killFrida() {
-        appendToLog("Killing Frida")
-        frida.killFrida()
+        appendToLog("Killing Frida...")
+        frida.killFrida(success = {
+            appendToLog("Frida was killed.")
+        }, error = {
+            appendToLog("Error while killing Frida:")
+            appendToLog(it)
+        })
     }
 
     private fun startFrida() {
