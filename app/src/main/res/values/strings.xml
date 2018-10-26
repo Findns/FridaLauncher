@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FridaLaunch</string>
+    <string name="main_activity_title">Frida Launch</string>
+    <string name="button_start">Start frida</string>
+    <string name="button_kill">Kill frida</string>
+    <string name="sample_log">
+    """[*] Permissions requested:
+[*] Found 1 dexfiles:
+['/mnt/c/Users/lbreton/samples/re_stack/1/apk-extracted/zip/classes.dex']
+
+[***] Analysing /mnt/c/Users/lbreton/samples/re_stack/1/apk-extracted/zip/classes.dex [***]
+
+[*] Running APKiD
+[*] APKiD not found. Skipping.
+
+[*] Opening dexfile with radare2…
+
+[*] Possible root detection found in strings:
+0x2aa1c 14 13 \fisudomirnds
+
+[*] No references to apks and dexfiles found in strings
+
+[*] No SMS or telephony usage found in methods
+
+[*] No SMS or telephony usage found in imports
+
+[*] No SMS or telephony usage found in symbols
+
+[*] No location api / access found in methods
+
+[*] No location api / access found in imports
+
+[*] No location api / access found in symbols
+
+[*] No interesting API (nfc, bluetooth…) references found in methods"
+    </string>
+</resources>
