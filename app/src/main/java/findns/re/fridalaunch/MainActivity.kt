@@ -21,13 +21,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun killFrida() {
-        log_text.append("Killing Frida...\n")
+        appendToLog("Killing Frida")
         frida.killFrida()
     }
 
     private fun startFrida() {
-        log_text.append("Starting Frida...\n")
-        frida.startFrida()
+        appendToLog("Starting Frida...")
+        frida.startFrida(success = {
+            appendToLog("Frida was started successfully!")
+        }, error = {
+            appendToLog("Error while starting Frida:")
+            appendToLog(it)
+        })
+    }
+
+    private fun appendToLog(string: String){
+        log_text.append(string + "\n")
     }
 
     private fun setScrollingTextView() {
